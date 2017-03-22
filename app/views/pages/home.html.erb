@@ -11,26 +11,30 @@
   </div>
 </div>
 
-<div class="container" id="aboutme">
-  <div class="row">
-    <div class="about-box">
-      <div class="col-xs-12 col-sm-5 left-photo hidden-xs">
-        <%= image_tag('photo-of-cat.jpg')%>
-      </div>
-      <div class="col-xs-12 col-sm-6 biography">
-        <div>
-          <h2>Hi, I'm Cat.</h2>
-          <p> I am a full-stack developer with a particularly soft spot for front end development. I love all things design and code and I’m always striving to learn more. <br> <br> I've lived in France and Portugal and I'm currently based in London. </p>
+<div id="aboutme">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 hidden-xs">
+        <div class="left-photo">
+          <%= image_tag('photo-of-cat.jpg') %>
         </div>
       </div>
-      <div class="col-sm-1 hidden-xs">
+      <div class="col-xs-12 col-sm-6">
+        <div class="biography">
+          <h2>Hi, I'm Cat.</h2>
+          <p> I'm a junior full-stack developer with a particularly soft spot for front end development. I love all things design and code and I’m always striving to learn new languages and skills. <br><br> My technical stack includes Ruby (on Rails), PostgreSQL and MVC-pattern architecture, but my favourite areas are JavaScript/jQuery, HTML5 and CSS (Sass). <br><br> When I'm not coding I'm drawing, cooking or learning a new language. In the past I've lived in beautiful France and Portugal, but I'm currently based in London. </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="pink-caret hidden-xs">
-    <%= link_to '#skills', class: "hvr-hang" do %>
-      <%= image_tag('pink-caret.png') %>
-    <% end %>
+    <div class="row">
+      <div class="pink-caret hidden-xs">
+        <%= link_to '#skills', class: "hvr-hang" do %>
+          <%= image_tag('pink-caret.png') %>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 </div>
 
