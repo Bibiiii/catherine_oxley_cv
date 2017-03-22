@@ -66,6 +66,11 @@
 // .blue-background {
 //   background: RGBA(66, 94, 108, 0.6);
 // }
+#skills {
+  background-color: RGBA(250, 96, 97, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .skills-box {
   // border: 2px solid grey;
@@ -106,9 +111,18 @@
 }
 
 .small-img {
-  height: 200px;
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
 }
 
+#portfolio {
+  min-height: 100vh;
+  img {
+    padding: 5px;
+    box-shadow: 10px 10px 5px -8px rgba(212,212,212,0.79);
+  }
+}
 
 #contact {
   height: 100vh;
@@ -130,13 +144,6 @@
   }
 }
 
-#portfolio {
-  min-height: 100vh;
-  img {
-    padding: 5px;
-    box-shadow: 10px 10px 5px -8px rgba(212,212,212,0.79);
-  }
-}
 
 
 // HANG ICON //////
