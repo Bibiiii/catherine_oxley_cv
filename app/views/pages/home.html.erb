@@ -1,10 +1,10 @@
 <div class="home-banner" style="background-image: url('<%= image_path('sky-background.jpg') %>'); background-size: cover; background-position: center; ">
+  <div></div>
   <div>
     <h1>CAT OXLEY</h1>
     <p class="tagline text-center">Web Developer</p>
   </div>
-
-  <div class="pink-caret hidden-xs" style="margin-top: 35vh">
+  <div class="pink-caret hidden-xs text-center" style="margin-bottom: 20px;">
     <a data-scroll href="#aboutme" class="hvr-hang">
       <%= image_tag('pink-caret.png') %>
     </a>
@@ -26,12 +26,12 @@
           <p> I'm a junior full-stack developer with a particularly soft spot for front end development. I love all things design and code and I’m always striving to learn new languages and skills. <br><br> My technical stack includes Ruby (on Rails), PostgreSQL and MVC-pattern architecture, but my favourite areas are JavaScript/jQuery, HTML5 and CSS (Sass). <br><br> When I'm not coding I'm drawing, cooking or learning a new language. In the past I've lived in beautiful France and Portugal, but I'm currently based in London. </p>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="pink-caret hidden-xs">
-        <%= link_to '#skills', class: "hvr-hang" do %>
-          <%= image_tag('pink-caret.png') %>
-        <% end %>
+      <div class="col-xs-12">
+        <div class="text-center pink-caret hidden-xs" style="margin-top: 40px">
+          <%= link_to '#skills', class: "hvr-hang" do %>
+            <%= image_tag('pink-caret.png') %>
+          <% end %>
+        </div>
       </div>
     </div>
 
