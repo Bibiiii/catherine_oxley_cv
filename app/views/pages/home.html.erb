@@ -1,13 +1,14 @@
 <div class="home-banner" style="background-image: url('<%= image_path('sky-background.jpg') %>'); background-size: cover; background-position: center; ">
-  <div></div>
   <div>
-    <h1>CAT OXLEY</h1>
-    <p class="tagline text-center">Web Developer</p>
-  </div>
-  <div class="pink-caret hidden-xs text-center" style="margin-bottom: 20px;">
-    <a data-scroll href="#aboutme" class="hvr-hang">
-      <%= image_tag('pink-caret.png') %>
-    </a>
+    <div>
+      <h1>CAT OXLEY</h1>
+      <p class="tagline text-center">Web Developer</p>
+    </div>
+    <div class="pink-caret text-center" style="margin-top: 100px">
+      <a data-scroll href="#aboutme" class="hvr-hang">
+        <%= image_tag('pink-caret.png') %>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -24,10 +25,11 @@
         <div class="biography">
           <h2>Hi, I'm Cat.</h2>
           <p> I'm a junior full-stack developer with a particularly soft spot for front end development. I love all things design and code and I’m always striving to learn new languages and skills. <br><br> My technical stack includes Ruby (on Rails), PostgreSQL and MVC-pattern architecture, but my favourite areas are JavaScript/jQuery, HTML5 and CSS (Sass). <br><br> When I'm not coding I'm drawing, cooking or learning a new language. In the past I've lived in beautiful France and Portugal, but I'm currently based in London. </p>
+          <%= image_tag('photo-of-cat.jpg', class: "visible-xs", style: "width: 100vw; height:40vh; object-fit: cover;")%>
         </div>
       </div>
       <div class="col-xs-12">
-        <div class="text-center pink-caret hidden-xs" style="margin-top: 40px">
+        <div class="text-center pink-caret" style="margin-top: 40px">
           <%= link_to '#skills', class: "hvr-hang" do %>
             <%= image_tag('pink-caret.png') %>
           <% end %>
@@ -39,7 +41,7 @@
 </div>
 
 <div class="skills-box" id="skills">
-<h2 class="text-center">My Skills</h2>
+  <h1 class="text-center">My Skills</h1>
 
   <div class="container">
 
@@ -87,6 +89,7 @@
         </ul>
       </div>
     </div> <!-- end of row -->
+
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 lang-list">
         <h2 class="text-center" style="margin-top: 0px">Languages</h2>
@@ -100,25 +103,70 @@
         </ul>
       </div>
     </div> <!-- end of row -->
+
     <div class="row">
       <div class="col-xs-12">
-        <div class="pink-caret hidden-xs text-center">
+        <div class="pink-caret text-center">
           <%= link_to '#contact', class: "hvr-hang" do %>
             <%= image_tag('pink-caret.png') %>
           <% end %>
         </div>
       </div>
     </div>
+
+  </div>
+</div>
+
+<div id="portfolio">
+  <h1 class="text-center">Portfolio</h1>
+  <div class="container">
+    <h2 class="text-center">Sportl</h2>
+    <%= link_to image_path('sportl-home.png'), class: "swipebox", rel: "sportl" do %>
+      <%= image_tag('sportl-home.png', class: "small-img") %>
+    <% end %>
+
+    <%= link_to image_path('sportl-show.png'), class: "swipebox", rel: "sportl" do %>
+      <%= image_tag('sportl-show.png', class: "small-img") %>
+    <% end %>
+
+    <%= link_to image_path('sportl-chat.png'), class: "swipebox", rel: "sportl" do %>
+      <%= image_tag('sportl-chat.png', class: "small-img") %>
+    <% end %>
+
+    <h2 class="text-center">Fluffies</h2>
+
+    <%= link_to image_path('fluffies-home.png'), class: "swipebox", rel: "fluffes" do %>
+      <%= image_tag('fluffies-home.png', class: "small-img") %>
+    <% end %>
+
+    <%= link_to image_path('fluffies-show.png'), class: "swipebox", rel: "fluffies" do %>
+      <%= image_tag('sportl-show.png', class: "small-img") %>
+    <% end %>
+    <%= link_to image_path('fluffies-profile.png'), class: "swipebox", rel: "fluffies" do %>
+      <%= image_tag('fluffies-profile.png', class: "small-img") %>
+    <% end %>
+
+    <h2 class="text-center">Group Action</h2>
+
+    <%= link_to image_path('group-action-home.png'), class: "swipebox", rel: "ga" do %>
+      <%= image_tag('group-action-home.png', class: "small-img") %>
+    <% end %>
+
+    <%= link_to image_path('group-action.png'), class: "swipebox", rel: "ga" do %>
+      <%= image_tag('group-action.png', class: "small-img") %>
+    <% end %>
   </div>
 </div>
 
 
 <div class="background-image"  style="background-image: url(' <%= image_path('telephone.jpg') %> '); background-size: cover; background-position: center">
   <div class="container" id="contact">
-    <div class="col-sm-6 col-sm-offset-6 contact-details">
-    <h2>Contact me</h2>
-    <div class="detail"><div><i class="fa fa-phone"></i></div><div><p>+447 397 286 856</p></div></div>
-    <div class="detail"><div><i class="fa fa-envelope"></i></div><div><p>cat.r.oxley@gmail.com</p></div></div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-6 contact-details">
+        <h2>Contact me</h2>
+        <div class="detail"><div><i class="fa fa-phone"></i></div><div><p>+447 397 286 856</p></div></div>
+        <div class="detail"><div><i class="fa fa-envelope"></i></div><div><p>cat.r.oxley@gmail.com</p></div></div>
+      </div>
     </div>
   </div>
 </div>
@@ -129,6 +177,11 @@
     smoothScroll.init({
       selector: 'a[href^="#"]'
     });
+    ;( function( $ ) {
+
+      $( '.swipebox' ).swipebox();
+
+    } )( jQuery );
   <% end %>
 <% end %>
 </script>

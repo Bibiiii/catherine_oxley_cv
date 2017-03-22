@@ -8,8 +8,8 @@
   width: 100vw;
   margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: center;
+  // flex-direction: column;
   align-items: center;
   h1 {
     font-family: "Oswald";
@@ -26,9 +26,10 @@
 
 #aboutme {
   height: 100vh;
+  width: 100vw;
   // margin-top: 30px;
   // padding-bottom: 30px;
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: center;
   // width: 100vw;
@@ -48,8 +49,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    h2 {
+      font-size: 5vmin;
+    }
     p {
-      font-size: 1.25em;
+      font-size: 3.2vmin;
+      padding: 10px;
     }
   }
 }
@@ -64,9 +69,10 @@
 
 .skills-box {
   // border: 2px solid grey;
-  height: 100vh;
-  h2 {
-    padding-top: 25px;
+  min-height: 100vh;
+  h1 {
+    padding-top: 10px;
+    // font-size: 5vmin;
   }
 
   ul li {
@@ -74,7 +80,7 @@
     margin-left: -50px;
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 3.2vmin;
     font-family: "Quicksand";
 
     i {
@@ -89,13 +95,18 @@
   }
   .lang-list {
     h2 {
-      margin-top: 20px;
-      padding: 10px;
+      margin-top: 10px;
+      padding: 5px;
+      font-size: 4.5vmin;
     }
     .pink {
       color: RGBA(250, 96, 97, 1.00);
     }
   }
+}
+
+.small-img {
+  height: 200px;
 }
 
 
@@ -116,6 +127,14 @@
     p {
       padding-left: 20px;
     }
+  }
+}
+
+#portfolio {
+  min-height: 100vh;
+  img {
+    padding: 5px;
+    box-shadow: 10px 10px 5px -8px rgba(212,212,212,0.79);
   }
 }
 
