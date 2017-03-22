@@ -62,43 +62,42 @@
 //   background: RGBA(66, 94, 108, 0.6);
 // }
 
-#skills {
-  // height: 100vh;
-  background: rgba(255, 255, 255,0.5);
-  margin-top: 5%;
-  position: relative;
-  .skills-box {
-    // border: 2px solid grey;
-    padding: 20px;
-
-    ul li {
-      list-style: none;
-      margin-left: -50px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 20px;
-      font-family: "Quicksand";
-
-      i {
-        color: RGBA(250, 96, 97, 1.00);
-      }
-
-    }
-    .skills-list {
-      padding: 30px;
-      padding-bottom: 0px;
-    }
-    .lang-list {
-      h2 {
-        padding: 15px;
-      }
-      .pink {
-        color: RGBA(250, 96, 97, 1.00);
-      }
-    }
+.skills-box {
+  // border: 2px solid grey;
+  height: 100vh;
+  h2 {
+    padding-top: 25px;
   }
 
+  ul li {
+    list-style: none;
+    margin-left: -50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: "Quicksand";
+
+    i {
+      color: RGBA(250, 96, 97, 1.00);
+    }
+
+  }
+  .skills-list {
+    padding: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 3px;
+  }
+  .lang-list {
+    h2 {
+      margin-top: 20px;
+      padding: 10px;
+    }
+    .pink {
+      color: RGBA(250, 96, 97, 1.00);
+    }
+  }
 }
+
 
 #contact {
   height: 100vh;
