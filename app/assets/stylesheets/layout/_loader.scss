@@ -1,0 +1,77 @@
+.loading_screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background: #E7D9D0;
+  animation: fadeout 1s 10s forwards;
+  overflow: hidden;
+  svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: auto;
+  }
+  #milk_bottle {
+    height: 25vh;
+  }
+  #loading_text {
+    opacity: 0;
+    animation: 8s 3s spin linear infinite, 7s 3s fadein forwards;
+  }
+
+  #square {
+    stroke: black;
+    stroke-width: 2px;
+    animation: 3s 2s x forwards;
+    stroke-dasharray: 410;
+    stroke-dashoffset: 410;
+  }
+
+  @keyframes x {
+    from {
+      opacity: 0;
+      stroke-dashoffset: 410;
+    }
+    to {
+      opacity: 1;
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform:rotate(360deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

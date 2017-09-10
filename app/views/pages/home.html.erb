@@ -1,4 +1,48 @@
-<div class="home-banner" style="background-image: url('<%= image_path('sky-background.jpg') %>'); background-size: cover; background-position: center; ">
+<%= render "shared/loading-screen" %>
+
+<nav>
+  <ul>
+    <li><a href="#about_me">ABOUT</a></li>
+    <li><a href="#portfolio">PORTFOLIO</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+    <li><%= link_to 'RESUMÉ', asset_path('resume.pdf') %></li>
+  </ul>
+</nav>
+
+<div class="welcome_banner" style="position:relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1 class="header_text">CAT OXLEY</h1>
+        <div class="text-center">
+          <%= image_tag('photo-of-cat-color.jpg', class: "full-img") %>
+        </div>
+      </div>
+      <div class="welcome_text col-sm-6">
+        <h1>Hello, I'm Cat. I'm <span class="inset_boxshadow" id="typed_box"></span></h1>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="about_me">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>A little about me. I'm a Web Developer from the <span id="yorkshire"><%= image_tag('yorkshire.jpg', class: "span-img") %>Yorkshire Dales<sup>1</sup></span>, currently based in <span id="london"><%= image_tag('london.jpg', class: "span-img") %>London<sup>2</sup></span>. I love clean code and beautiful design, whatever the platform - no site deserves to be ugly.
+        <br/>
+        <br/>
+        (Other - less relevant - interests include <span id="interior_design"><%= image_tag('interior_design.jpg', class: "span-img") %>cosy interiors<sup>3</sup></span>, <span id="doggies"><%= image_tag('doggies.jpg', class: "span-img") %>doggies<sup>4</sup></span>, <span id="baking"><%= image_tag('baking.jpg', class: "span-img") %>baking<sup>5</sup></span> and <span id="jane_austen"><%= image_tag('austen.jpg', class: "span-img") %>Jane Austen<sup>6</sup></span>).
+        <br/>
+        <br/>
+        Please check out some of the work I've done below.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="home-banner" style="background-image: url('<#%= image_path('sky-background.jpg') %>'); background-size: cover; background-position: center; ">
   <div>
     <div>
       <h1>CAT OXLEY</h1>
@@ -6,208 +50,194 @@
     </div>
     <div class="pink-caret text-center" style="margin-top: 100px">
       <a data-scroll href="#aboutme" class="hvr-hang">
-        <%= image_tag('pink-caret.png') %>
+        <#%= image_tag('pink-caret.png') %>
       </a>
     </div>
   </div>
 </div>
+ -->
 
-<div id="aboutme">
-  <div class="container">
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 hidden-xs">
-        <div class="left-photo">
-          <%= image_tag('photo-of-cat.jpg') %>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="biography">
-          <h2>Hi, I'm Cat.</h2>
-          <p> I'm a junior full-stack developer with a particularly soft spot for front end development. I love all things design and code and I’m always striving to learn new languages and skills. <br><br> My technical stack includes Ruby (on Rails), PostgreSQL and MVC-pattern architecture, but my favourite areas are JavaScript/jQuery, HTML5 and CSS (Sass). <br><br> When I'm not coding I'm drawing, cooking or learning a new language. In the past I've lived in beautiful France and Portugal, but I'm currently based in London. </p>
-          <%= image_tag('photo-of-cat.jpg', class: "visible-xs", style: "width: 100vw; height:40vh; object-fit: cover;")%>
-        </div>
-      </div>
-      <div class="col-xs-12">
-        <div class="text-center pink-caret" style="margin-top: 40px">
-          <%= link_to '#skills', class: "hvr-hang" do %>
-            <%= image_tag('pink-caret.png') %>
-          <% end %>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</div>
+<div class="container">
+  <div id="portfolio">
+  <h1 class="brand-color text-right">PORTFOLIO</h1>
 
-<div class="skills-box" id="skills">
-  <h1 class="text-center">My Skills</h1>
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-sm-6 skills-list">
-        <ul>
-          <li>HTML5
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"></i></div></li>
-          <li>CSS3
-          <div> <% 4.times do %> <i class="fa fa-circle"></i><% end %> <i class="fa fa-circle-thin"></i></div></li>
-          <li>Bootstrap
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"></i></div></li>
-          <li>Ruby
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"></i></div></li>
-          <li>SQL
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"></i></div></li>
-          <li>Sass
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"></i></div></li>
-          <li>Sketch
-           <div> <% 3.times do %> <i class="fa fa-circle"></i> <% end %> <% 2.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>JavaScript
-          <div> <% 3.times do %> <i class="fa fa-circle"></i> <% end %> <% 2.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>jQuery
-          <div> <% 3.times do %> <i class="fa fa-circle"></i> <% end %> <% 2.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-        </ul>
-      </div>
-      <div class="col-sm-6 skills-list">
-        <ul>
-          <li>Rails
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"> </i> </div> </li>
-          <li>MVC
-          <div> <% 4.times do %> <i class="fa fa-circle"></i> <% end %> <i class="fa fa-circle-thin"> </i> </div></li>
-          <li>Sinatra
-          <div> <% 3.times do %> <i class="fa fa-circle"></i> <% end %> <% 2.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>Command line
-          <div> <% 3.times do %> <i class="fa fa-circle"></i> <% end %> <% 2.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>OOP
-          <div> <% 3.times do %> <i class="fa fa-circle"></i> <% end %> <% 2.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>Wordpress
-          <div> <% 2.times do %> <i class="fa fa-circle"></i> <% end %> <% 3.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>Adobe Illustrator
-          <div> <% 2.times do %> <i class="fa fa-circle"></i> <% end %> <% 3.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-          <li>Photoshop
-          <div> <% 2.times do %> <i class="fa fa-circle"></i> <% end %> <% 3.times do %> <i class="fa fa-circle-thin"> </i> <% end %> </div></li>
-        </ul>
-      </div>
-    </div> <!-- end of row -->
-
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 lang-list">
-        <h2 class="text-center" style="margin-top: 0px">Languages</h2>
-        <ul>
-          <li><div><span class="pink">English</span> (mother tongue)</div><div>100%</div></li>
-          <li><div><span class="pink">French</span> (degree-level)</div><div>90%</div></li>
-          <li><div><span class="pink">Portuguese</span> (lived there)</div><div>60%</div></li>
-          <li><div><span class="pink">Spanish</span> (casual)</div><div>50%</div></li>
-          <li><div><span class="pink">Mandarin</span> (10 weeks)</div><div>5%</div></li>
-          <li><div><span class="pink">Arabic</span> (for fun)</div><div>5%</div></li>
-        </ul>
-      </div>
-    </div> <!-- end of row -->
-
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="pink-caret text-center">
-          <%= link_to '#portfolio', class: "hvr-hang" do %>
-            <%= image_tag('pink-caret.png') %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div id="portfolio">
-  <h1 class="text-center">Portfolio</h1>
-
-  <div class="container">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
 
-        <div class="row" style="background-color: #f3f3f3; padding: 20px; margin-bottom: 20px;">
-          <h2 class="text-center">Sportl</h2>
-          <div class="col-sm-4">
+        <div class="row pink-box" style="">
+          <h2>Sportl</h2>
+          <div class="col-sm-6">
             <%= link_to image_path('sportl-home.png'), class: "swipebox hvr-grow", rel: "sportl" do %>
               <%= image_tag('sportl-home.png', class: "small-img") %>
             <% end %>
+            <div class="hidden">
+              <%= link_to image_path('sportl-show.png'), class: "swipebox hvr-grow", rel: "sportl" do %>
+                <%= image_tag('sportl-show.png', class: "small-img") %>
+              <% end %>
+            </div>
+            <div class="hidden">
+              <%= link_to image_path('sportl-chat.png'), class: "swipebox hvr-grow", rel: "sportl" do %>
+                <%= image_tag('sportl-chat.png', class: "small-img") %>
+              <% end %>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <%= link_to image_path('sportl-show.png'), class: "swipebox hvr-grow", rel: "sportl" do %>
-              <%= image_tag('sportl-show.png', class: "small-img") %>
-            <% end %>
-          </div>
-          <div class="col-sm-4">
-            <%= link_to image_path('sportl-chat.png'), class: "swipebox hvr-grow", rel: "sportl" do %>
-              <%= image_tag('sportl-chat.png', class: "small-img") %>
-            <% end %>
-          </div>
-        </div>
-
-        <div class="row" style="background-color: #f3f3f3; padding: 20px; margin-bottom: 20px;">
-          <h2 class="text-center">Fluffies</h2>
-          <div class="col-sm-4">
-            <%= link_to image_path('fluffies-home.png'), class: "swipebox hvr-grow", rel: "fluffies" do %>
-              <%= image_tag('fluffies-home.png', class: "small-img") %>
-            <% end %>
-          </div>
-          <div class="col-sm-4">
-            <%= link_to image_path('fluffies-show.png'), class: "swipebox hvr-grow", rel: "fluffies" do %>
-              <%= image_tag('fluffies-show.png', class: "small-img") %>
-            <% end %>
-          </div>
-          <div class="col-sm-4">
-            <%= link_to image_path('fluffies-profile.png'), class: "swipebox hvr-grow", rel: "fluffies" do %>
-              <%= image_tag('fluffies-profile.png', class: "small-img") %>
-            <% end %>
+          <div class="col-sm-6">
+            <p class="project-description">
+              Lead front-end developer on Sportl - an app that aims to link teams and players together. My responsibilities included full UI design and front-end development.
+              <br>
+              <br>
+              <%= image_tag('rails.png', class: 'grayscale') %>
+              <%= image_tag('postgresql.png', class: 'grayscale') %>
+              <%= image_tag('heroku.svg', class: 'grayscale') %>
+              <%= image_tag('bootstrap.png', class: 'grayscale') %>
+              <%= image_tag('sass.svg', class: 'grayscale') %>
+            </p>
+            </p>
           </div>
         </div>
 
-        <div class="row" style="background-color: #f3f3f3; padding: 20px; margin-bottom: 20px;">
-          <h2 class="text-center">Group Action</h2>
-          <div class="col-sm-4">
-            <%= link_to image_path('group-action-home.png'), class: "swipebox hvr-grow", rel: "ga" do %>
-              <%= image_tag('group-action-home.png', class: "small-img") %>
+        <div class="row pink-box" style="">
+          <h2>Diary Directory</h2>
+          <div class="col-sm-6">
+            <%= link_to image_path('diary-home.png'), class: "swipebox hvr-grow", rel: "diary" do %>
+              <%= image_tag('diary-home.png', class: "small-img") %>
             <% end %>
+            <div class="hidden">
+            <%= link_to image_path('diary-news.png'), class: "swipebox hvr-grow", rel: "diary" do %>
+              <%= image_tag('diary-news.png', class: "small-img") %>
+            <% end %>
+              <%= link_to image_path('diary-mobile-home.png'), class: "swipebox hvr-grow", rel: "diary" do %>
+                <%= image_tag('diary-mobile-home.png', class: "small-img") %>
+              <% end %>
+              <%= link_to image_path('diary-mobile-menu.png'), class: "swipebox hvr-grow", rel: "diary" do %>
+                <%= image_tag('diary-mobile-menu.png', class: "small-img") %>
+              <% end %>
+              <%= link_to image_path('diary-mobile-index.png'), class: "swipebox hvr-grow", rel: "diary" do %>
+                <%= image_tag('diary-mobile-index.png', class: "small-img") %>
+              <% end %>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <%= link_to image_path('group-action.png'), class: "swipebox hvr-grow", rel: "ga" do %>
-              <%= image_tag('group-action.png', class: "small-img") %>
-            <% end %>
+          <div class="col-sm-6">
+            <p class="project-description">
+              Lead front-end developer on fashion directory, Diary Directory. Worked closely with both the creative director and backend team to realise the designs on this major redesign project.
+              <br>
+              <br>
+              <%= image_tag('codeigniter.svg', class: 'grayscale') %>
+              <%= image_tag('mysql.png', class: 'grayscale') %>
+              <%= image_tag('bootstrap.png', class: 'grayscale') %>
+              <%= image_tag('sass.svg', class: 'grayscale') %>
+            </p>
+            </p>
           </div>
         </div>
+
+        <div class="row pink-box" style="">
+          <h2>UKJFF</h2>
+          <div class="col-sm-6">
+            <%= link_to image_path('ukjff-index.png'), class: "swipebox hvr-grow", rel: "ukjff" do %>
+              <%= image_tag('ukjff-index.png', class: "small-img") %>
+            <% end %>
+            <div class="hidden">
+              <%= link_to image_path('ukjff-show.png'), class: "swipebox hvr-grow", rel: "ukjff" do %>
+                <%= image_tag('ukjff-show.png', class: "small-img") %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="project-description">
+              Lead front-end developer on UK Jewish Film Festival booking system. Worked closely with the client to create an accessible site for all age-groups. The site Launching soon.
+              <br>
+              <br>
+              <%= image_tag('codeigniter.svg', class: 'grayscale') %>
+              <%= image_tag('mysql.png', class: 'grayscale') %>
+              <%= image_tag('bootstrap.png', class: 'grayscale') %>
+              <%= image_tag('sass.svg', class: 'grayscale') %>
+            </p>
+            </p>
+          </div>
+        </div>
+
+        <div class="row pink-box" style="">
+          <h2>Sweat by BXR</h2>
+          <div class="col-sm-6">
+            <%= link_to image_path('sweat-timetable.png'), class: "swipebox hvr-grow", rel: "sweat" do %>
+              <%= image_tag('sweat-timetable.png', class: "small-img") %>
+            <% end %>
+            <div class="hidden">
+              <%= link_to image_path('sweat-timetable-mobile.png'), class: "swipebox hvr-grow", rel: "sweat" do %>
+                <%= image_tag('sweat-timetable-mobile.png', class: "small-img") %>
+              <% end %>
+              <%= link_to image_path('buy-a-sweatpack.png'), class: "swipebox hvr-grow", rel: "sweat" do %>
+                <%= image_tag('buy-a-sweatpack.png', class: "small-img") %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="project-description">
+              Developer of Sweat by BXR's timetable and account components. Co-ordinated API integration with MindBody and responsible for client liason.
+              <br>
+              <br>
+              <%= image_tag('php.svg', class: 'grayscale') %>
+              <%= image_tag('sass.svg', class: 'grayscale') %>
+              <%= image_tag('bootstrap.png', class: 'grayscale') %>
+              <%= image_tag('mindbody.png', class: 'grayscale') %>
+            </p>
+            </p>
+          </div>
+        </div>
+
+        <div class="row pink-box" style="">
+          <h2>Rachel London</h2>
+          <div class="col-sm-6">
+            <%= link_to image_path('rachel-home.png'), class: "swipebox hvr-grow", rel: "rachel" do %>
+              <%= image_tag('rachel-home.png', class: "small-img") %>
+            <% end %>
+            <div class="hidden">
+              <%= link_to image_path('rachel-lookbook.png'), class: "swipebox hvr-grow", rel: "rachel" do %>
+                <%= image_tag('rachel-lookbook.png', class: "small-img") %>
+              <% end %>
+              <%= link_to image_path('rachel-masonry.png'), class: "swipebox hvr-grow", rel: "rachel" do %>
+                <%= image_tag('rachel-masonry.png', class: "small-img") %>
+              <% end %>
+              <%= link_to image_path('rachel-stockists.png'), class: "swipebox hvr-grow", rel: "rachel" do %>
+                <%= image_tag('rachel-stockists.png', class: "small-img") %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="project-description">
+              High-end Shopify site with custom-built lookbook and blog. These sections needed to blend stylishly into the existing site whilst allowing the client to edit them easily. Worked with the client to select a sleek slider lookbook and masonry-style blog section.
+              <br>
+              <br>
+              <%= image_tag('shopify.png', class: 'grayscale') %>
+            </p>
+            </p>
+          </div>
+        </div>
+
+
 
       </div>
+      <!-- col-10 -->
     </div>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="pink-caret text-center">
-          <%= link_to '#contact', class: "hvr-hang" do %>
-            <%= image_tag('pink-caret.png', style: "box-shadow: none;") %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
+    <!-- row -->
   </div>
-</div>
+  <!-- container -->
 
 
-<div class="background-image"  style="background-image: url(' <%= image_path('telephone.jpg') %> '); background-size: cover; background-position: center">
-  <div class="container" id="contact">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-6 contact-details">
-        <h2>Contact me</h2>
-        <div class="detail"><div><i class="fa fa-phone"></i></div><div><p>+447 397 286 856</p></div></div>
-        <div class="detail"><div><i class="fa fa-envelope"></i></div><div><p>cat.r.oxley@gmail.com</p></div></div>
-      </div>
+
     </div>
   </div>
-</div>
-<!-- hi -->
 <script>
 <%= content_for(:after_js) do %>
   <%= javascript_tag do %>
+    window.setTimeout(function() {
+      $(".loading_screen").css("display", "none");
+    }, 11000);
     smoothScroll.init({
       selector: 'a[href^="#"]'
     });
@@ -216,6 +246,13 @@
       $( '.swipebox' ).swipebox();
 
     } )( jQuery );
+
+    var typed = new Typed('#typed_box', {
+      strings: ["a web developer", "a designer", "a coder", "a doggy-lover", "a baker", "looking forward to working with you"],
+      startDelay: 10000,
+      typeSpeed: 80,
+    });
+
   <% end %>
 <% end %>
 </script>
