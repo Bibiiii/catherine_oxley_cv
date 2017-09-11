@@ -13,7 +13,7 @@
     width: 100%;
     bottom: 0;
     color: white;
-    font-size: 120px;
+    max-width:90%;
   }
   .welcome_text {
     // position: absolute;
@@ -277,11 +277,17 @@
   .small-img {
     left: -100px;
   }
+  .header_text {
+    font-size: 120px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .welcome_text h1 {
     font-size: 30px;
+  }
+  .header_text {
+    font-size: 100px;
   }
   .full-img {
     height: auto !important;
