@@ -1,5 +1,5 @@
 <%= render "shared/loading-screen" %>
-
+<div class="main_content">
 <div class="welcome_banner" style="position:relative">
   <div class="container">
     <div class="row">
@@ -226,10 +226,6 @@
   <!-- container -->
 
 
-<div class="container">
-  <div class="row">
-
-  </div>
 </div>
 <script>
 <%= content_for(:after_js) do %>
@@ -252,6 +248,14 @@
       typeSpeed: 80,
     });
 
+    function setFooterHeight() {
+      var footerParaHeight = $("footer").height() + 70;
+      $(".main_content").css("margin-bottom",footerParaHeight);
+    }
+    $(window).resize(function() {
+      setFooterHeight();
+    });
+    setFooterHeight();
   <% end %>
 <% end %>
 </script>
