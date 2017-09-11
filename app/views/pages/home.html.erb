@@ -1,14 +1,5 @@
 <%= render "shared/loading-screen" %>
 
-<nav>
-  <ul>
-    <li><a href="#about_me">ABOUT</a></li>
-    <li><a href="#portfolio">PORTFOLIO</a></li>
-    <li><a href="#contact">CONTACT</a></li>
-    <li><%= link_to 'RESUMÉ', asset_path('resume.pdf') %></li>
-  </ul>
-</nav>
-
 <div class="welcome_banner" style="position:relative">
   <div class="container">
     <div class="row">
@@ -42,32 +33,19 @@
   </div>
 </div>
 
-<!-- <div class="home-banner" style="background-image: url('<#%= image_path('sky-background.jpg') %>'); background-size: cover; background-position: center; ">
-  <div>
-    <div>
-      <h1>CAT OXLEY</h1>
-      <p class="tagline text-center">Web Developer</p>
-    </div>
-    <div class="pink-caret text-center" style="margin-top: 100px">
-      <a data-scroll href="#aboutme" class="hvr-hang">
-        <#%= image_tag('pink-caret.png') %>
-      </a>
-    </div>
-  </div>
-</div>
- -->
-
-
 
 <div class="container">
   <div id="portfolio">
-  <h1 class="brand-color text-right">PORTFOLIO</h1>
+
+    <h1 class="brand-color text-right">PORTFOLIO</h1>
 
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
 
         <div class="row pink-box" style="">
+
           <h2>Sportl</h2>
+
           <div class="col-sm-6">
             <%= link_to image_path('sportl-home.png'), class: "swipebox hvr-grow", rel: "sportl" do %>
               <%= image_tag('sportl-home.png', class: "small-img") %>
@@ -83,6 +61,8 @@
               <% end %>
             </div>
           </div>
+
+          <!-- col sm 6 -->
           <div class="col-sm-6">
             <p class="project-description">
               Lead front-end developer on Sportl - an app that aims to link teams and players together. My responsibilities included full UI design and front-end development.
@@ -96,9 +76,12 @@
             </p>
             </p>
           </div>
+          <!-- col sm 6 -->
         </div>
+        <!-- row -->
 
         <div class="row pink-box" style="">
+
           <h2>Diary Directory</h2>
           <div class="col-sm-6">
             <%= link_to image_path('diary-home.png'), class: "swipebox hvr-grow", rel: "diary" do %>
@@ -119,6 +102,7 @@
               <% end %>
             </div>
           </div>
+          <!-- col sm 6 -->
           <div class="col-sm-6">
             <p class="project-description">
               Lead front-end developer on fashion directory, Diary Directory. Worked closely with both the creative director and backend team to realise the designs on this major redesign project.
@@ -131,9 +115,12 @@
             </p>
             </p>
           </div>
+          <!-- col sm 6 -->
         </div>
+        <!-- row -->
 
         <div class="row pink-box" style="">
+
           <h2>UKJFF</h2>
           <div class="col-sm-6">
             <%= link_to image_path('ukjff-index.png'), class: "swipebox hvr-grow", rel: "ukjff" do %>
@@ -145,6 +132,7 @@
               <% end %>
             </div>
           </div>
+          <!-- col sm 6 -->
           <div class="col-sm-6">
             <p class="project-description">
               Lead front-end developer on UK Jewish Film Festival booking system. Worked closely with the client to create an accessible site for all age-groups. The site Launching soon.
@@ -157,7 +145,9 @@
             </p>
             </p>
           </div>
+          <!-- col sm 6 -->
         </div>
+        <!-- row -->
 
         <div class="row pink-box" style="">
           <h2>Sweat by BXR</h2>
@@ -174,6 +164,7 @@
               <% end %>
             </div>
           </div>
+          <!-- col sm 6 -->
           <div class="col-sm-6">
             <p class="project-description">
               Developer of Sweat by BXR's timetable and account components. Co-ordinated API integration with MindBody and responsible for client liason.
@@ -186,9 +177,12 @@
             </p>
             </p>
           </div>
+          <!-- col sm 6 -->
         </div>
+        <!-- row -->
 
         <div class="row pink-box" style="">
+
           <h2>Rachel London</h2>
           <div class="col-sm-6">
             <%= link_to image_path('rachel-home.png'), class: "swipebox hvr-grow", rel: "rachel" do %>
@@ -206,6 +200,7 @@
               <% end %>
             </div>
           </div>
+          <!-- col sm 6 -->
           <div class="col-sm-6">
             <p class="project-description">
               High-end Shopify site with custom-built lookbook and blog. These sections needed to blend stylishly into the existing site whilst allowing the client to edit them easily. Worked with the client to select a sleek slider lookbook and masonry-style blog section.
@@ -215,23 +210,27 @@
             </p>
             </p>
           </div>
+          <!-- col sm 6 -->
         </div>
+        <!-- row -->
 
 
 
       </div>
-      <!-- col-10 -->
+      <!-- col-sm-10 -->
     </div>
     <!-- row -->
   </div>
+    <!-- #portfolio -->
+</div>
   <!-- container -->
 
 
-  <div class="container">
-    <div class="row">
+<div class="container">
+  <div class="row">
 
-    </div>
   </div>
+</div>
 <script>
 <%= content_for(:after_js) do %>
   <%= javascript_tag do %>
