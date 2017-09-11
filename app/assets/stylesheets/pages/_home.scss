@@ -127,28 +127,6 @@
   }
 }
 
-#contact {
-  height: 100vh;
-  .contact-details {
-    background: rgba(255,255,255,0.3);
-    margin-top: 40px;
-    padding: 50px;
-    h2 {
-      font-size: 2.5em;
-    }
-  }
-  .detail {
-    display: flex;
-    padding: 20px;
-    font-size: 25px;
-    p {
-      padding-left: 20px;
-    }
-  }
-}
-
-
-
 // HANG ICON //////
 @-webkit-keyframes hvr-hang {
   0% {
