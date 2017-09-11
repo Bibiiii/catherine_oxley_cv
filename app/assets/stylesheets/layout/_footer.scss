@@ -1,1 +1,40 @@
 // Your footer style
+footer {
+  box-shadow: 0px 1px 6px #e2e1e1;
+  padding: 35px;
+  // height: 90px;
+  font-family: $header-font;
+  h3 {
+    box-shadow: inset 0px -12px #E7D9D0;
+  }
+  p {
+    font-family: $header-font !important;
+    font-size: 20px;
+  }
+  i {
+    margin-right: 20px;
+    background-color: #E7D9D0;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;
+    transition: 0.3s border-radius ease;
+    &:hover {
+      border-radius: 50%;
+    }
+  }
+  .fa {
+    font-size: 20px;
+  }
+  .contact_box {
+    a {
+      color: black;
+      &:hover, &:focus {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
