@@ -241,4 +241,10 @@
   .project-description {
     width: 100% !important;
   }
+  @media (max-height: 460px)  {
+    .welcome_text h1 {
+      padding-top: 0 !important;
+      font-size: auto;
+    }
+  }
 }
